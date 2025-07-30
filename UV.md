@@ -57,15 +57,6 @@ classifiers = [
     "Programming Language :: Python :: 3.12",
 ]
 
-dependencies = [
-    "fastapi>=0.108.0",
-    "uvicorn>=0.25.0",
-    "pandas>=2.1.0",
-    "numpy>=1.26.0",
-    "requests>=2.31.0",
-    "python-dotenv>=1.0.0",
-]
-
 [project.optional-dependencies]
 dev = [
     "black>=23.12.0",
@@ -81,7 +72,7 @@ dev = [
     "pytest-mock>=3.12.0",
     "pydocstyle>=6.3.0",
     "typing-extensions>=4.9.0",
-]
+] -->
 
 jupyter = [
     "jupyter>=1.0.0",

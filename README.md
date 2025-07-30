@@ -31,7 +31,8 @@
         "ms-python.mypy-type-checker",
         "charliermarsh.ruff",
         "ms-vscode.live-server",
-        "ms-vscode.vscode-json"
+        "ms-vscode.vscode-json",
+        "psioniq.psi-header"
     ]
 }
 ```
