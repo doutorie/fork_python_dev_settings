@@ -43,8 +43,7 @@
     "jupyter.interactiveWindow.creationMode": "perFile",
     // Editor
     "editor.rulers": [
-        88,
-        120
+        79
     ],
     "editor.wordWrap": "on",
     "editor.minimap.enabled": true,
