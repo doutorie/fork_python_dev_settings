@@ -50,6 +50,13 @@
             "markdown"
         ]
     },
+    "psi-header.lang-config": [
+        {
+            "language": "python",
+            "begin": "\"\"\"",
+            "end": "\"\"\""
+        }
+    ],
     "psi-header.variables": [
         [
             "author",
@@ -57,7 +64,7 @@
         ],
         [
             "company",
-            "Doutor-IE"
+            "replace with company name"
         ],
         [
             "projectname",

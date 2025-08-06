@@ -4,7 +4,7 @@ Project: replace with your project name
 Created: Tuesday, 5th August 2025 4:29:42 pm
 Author: replace with your name
 
-Copyright (c) 2025 Doutor-IE. All rights reserved.
+Copyright (c) 2025 replace with company name. All rights reserved.
 """
 
 

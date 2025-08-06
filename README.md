@@ -1,6 +1,6 @@
-# VS Code Python Development Setup Guide
+#  📖🐍 VS Code Python  Development Setup
 
-## VS Code Extensions
+## ⚙️ VS Code Extensions
 
 ```json
 {
@@ -48,9 +48,9 @@ project_name/
 └── pytest.ini          # Pytest configuration
 ```
 
-## Tool Configuration
+## ⚙️ Tool Configuration
 
-### Using uv for Dependencies
+### Using UV for Dependencies
 
 ```bash
 # Install uv
@@ -80,7 +80,7 @@ Ruff is configured for:
 - Docstring validation
 ```
 
-### pytest Configuration (optional)
+### 🧪 pytest Configuration (optional)
 
 *Add only if used in the project* into -> `pyproject.toml`
 
@@ -101,3 +101,30 @@ markers = [
     "slow: Tests that take longer to run"
 ]
 ````
+
+## 💡 How to use
+
+1. Install extensions
+2. Copy the `pyproject.toml`
+3. Copy [.cursor/settings.json](.cursor/settings.json) or [.vscode/settings.json](.vscode/settings.json) to your IDE
+    - *IMPORTANT* : psioniq-header on cursor sometimes requires to edit the user `settings.json`, instead of the workspace `.cursor`. It also automatically searches for `.vscode`, so if you have both in your current dir make sure it also matches the config here provided.
+4. Start local enviroment (for example using UV or main Python distribution)
+5. Change in your IDE `settings.json` the following configurations:
+    ````json
+    {
+        "psi-header.variables": [
+            [
+                "author",
+                "replace with your name"
+            ],
+            [
+                "company",
+                "replace with company name"
+            ],
+            [
+                "projectname",
+                "replace with your project name"
+            ],
+        ]
+    }
+    ````
