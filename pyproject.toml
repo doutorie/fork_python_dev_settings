@@ -15,8 +15,10 @@ authors = [
 line-length = 80
 target-version = "py39"
 
+[tool.ruff.lint]
 # Ativa todas as regras possíveis (v0.4.0+)
 select = ["ALL"]
+preview = true
 
 # Ignora regras indesejadas
 ignore = [
@@ -25,9 +27,6 @@ ignore = [
 
 # ...mas reativa presença obrigatória de docstring
 extend-select = ["D100", "D101", "D103"]
-
-# (Só use se estiver usando pacotes em namespace ou layout src/)
-namespace-packages = ["."]
 
 [tool.ruff.format]
 quote-style = "double"
