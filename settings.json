@@ -36,7 +36,7 @@
     // File header configuration
     "psi-header.config": {
         "forceToTop": true,
-        "blankLinesAfter": 1,
+        "blankLinesAfter": 1
     },
     "psi-header.changes-tracking": {
         "isActive": false,
@@ -64,12 +64,12 @@
         ],
         [
             "company",
-            "replace with company name"
+            "Doutorie"
         ],
         [
             "projectname",
             "replace with your project name"
-        ],
+        ]
     ],
     "psi-header.templates": [
         {
@@ -80,7 +80,7 @@
                 "Created: <<filecreated('dddd, Do MMMM YYYY h:mm:ss a')>>",
                 "Author: <<author>>",
                 "",
-                "Copyright (c) <<year>> <<company>>. All rights reserved.",
+                "Copyright (c) <<year>> <<company>>. All rights reserved."
             ]
         }
     ]

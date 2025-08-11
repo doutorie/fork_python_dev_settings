@@ -106,7 +106,7 @@ markers = [
 
 1. Install extensions
 2. Copy the `pyproject.toml`
-3. Copy [.cursor/settings.json](.cursor/settings.json) or [.vscode/settings.json](.vscode/settings.json) to your IDE
+3. Copy [settings.json](settings.json) to your `.vscode` or `.cursor` IDE
     - *IMPORTANT* : psioniq-header on cursor sometimes requires to edit the user `settings.json`, instead of the workspace `.cursor`. It also automatically searches for `.vscode`, so if you have both in your current dir make sure it also matches the config here provided.
 4. Start local enviroment (for example using UV or main Python distribution)
 5. Change in your IDE `settings.json` the following configurations:
@@ -118,13 +118,15 @@ markers = [
                 "replace with your name"
             ],
             [
-                "company",
-                "replace with company name"
-            ],
-            [
                 "projectname",
                 "replace with your project name"
             ],
         ]
     }
     ````
+6. At [pyproject.toml](pyproject.toml) modify the following to match your contact information.
+```json
+authors = [
+    {name = "colaborador", email = "colaborador@doutorie.com"}
+]
+```
