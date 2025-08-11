@@ -15,30 +15,66 @@ authors = [
 line-length = 80
 target-version = "py39"
 
+
 [tool.ruff.lint]
-# Ativa todas as regras possíveis (v0.4.0+)
-select = ["ALL"]
-preview = true
+# Conjunto curado (evita o "ALL" ser excessivo)
+select = [
+  "E",   # pycodestyle (PEP8)
+  "W",   # pycodestyle warnings
+  "F",   # pyflakes
+  "I",   # isort (ordenação de imports)
+  "N",   # pep8-naming
+  "B",   # flake8-bugbear
+  "C4",  # comprehensions
+  "SIM", # simplify (com exceções abaixo)
+  "UP",  # pyupgrade (sugestões p/ versões mais novas)
+  "PT",
+  "RUF", # regras específicas do Ruff
+]
+
+preview = false
 
 # Ignora regras indesejadas
 ignore = [
-    "D",     # Ignore todos os erros de docstring...
+  "D",       # Desliga tudo de docstring...
+  "G004",    # f-string em logging
+  "SIM103",  # (desligada conforme pedido)
+  # Permite "else após return/break/continue"
+  "RET505",  # else after return
+  "RET506",  # else after raise
+  "RET507",  # else after continue
+  "RET508",  # else after break,
 ]
 
-# ...mas reativa presença obrigatória de docstring
-extend-select = ["D100", "D101", "D103"]
+extend-select = ["D100", "D101", "D102", "D103", "D104", "D105", "D107"]
+
+
+# Ignora arquivos __init__.py
+exclude = ["**/__init__.py"]
+
+[tool.ruff.lint.isort]
+# Mantém padrão consistente de imports
+combine-as-imports = true
+force-sort-within-sections = true
+split-on-trailing-comma = true
+known-first-party = ["your_package_name"]  # troque pelo nome do seu pacote
 
 [tool.ruff.format]
 quote-style = "double"
 indent-style = "space"
 line-ending = "lf"
-preview = true
+preview = false
 
 [tool.mypy]
 python_version = "3.9"
 check_untyped_defs = true
-ignore_missing_imports = false
 disallow_untyped_defs = true
+strict_optional = true
+no_implicit_optional = true
 warn_unused_ignores = true
 warn_return_any = true
-strict_optional = true
+warn_redundant_casts = true
+warn_unused_configs = true
+ignore_missing_imports = false
+pretty = true
+show_error_codes = true
